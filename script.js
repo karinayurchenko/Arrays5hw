@@ -33,7 +33,7 @@ console.log(getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 3, 3, 3, 
 
 //Function #3
 const getAverage = (...numbers) => {
-let averageNumber = numbers.reduce((acc,element) => {
+const averageNumber = numbers.reduce((acc,element) => {
     if (Number.isInteger(element)) {
        return acc + element;
     } else {
@@ -100,12 +100,13 @@ console.log(replaceBadWords("Are you fucking kidding?"));
 //Function #9
 const devideByThree = (word)  => {
 let devided = [];
+word = word.toLowerCase();
 for ( let i = 0; i < word.length; i+=3 ) {
     devided.push(word.substring(i, i+3));
 }
 return devided;
 };
-console.log (devideByThree('Commander'));
+console.log (devideByThree('CoMManDer'));
 
 document.writeln(`
 1) Result of the  random array: ${getRandomArray(7, 5, 25)}<br>
